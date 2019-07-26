@@ -1,4 +1,4 @@
-# Opensim Startup Scripts (1.0.0)
+# Opensim Startup Scripts (1.1.0)
 Startup scripts for the Opensim virtual world software - uses the "screen" command to manage session. This also restarts the Opensim process if it crashes.
 
 Official support sites: [Official Github Repo](https://github.com/fstltna/OpensimStartup) - [Official Forum](https://opensimcity.org/index.php/forum/server-software)
