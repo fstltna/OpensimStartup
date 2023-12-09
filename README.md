@@ -1,15 +1,13 @@
 # Opensim Startup Scripts (1.1.0)
 Startup scripts for the Opensim virtual world software - uses the "screen" command to manage session. This also restarts the Opensim process if it crashes.
 
-Official support sites: [Official Github Repo](https://github.com/fstltna/OpensimStartup) - [Official Forum](https://opensimcity.org/index.php/forum/server-software)
+Official support sites: [Official Github Repo](https://github.com/fstltna/OpensimStartup) - [Official Forum](https://opensimcity.gameplayer.club/index.php/opensimforum/our-opensim-tools)
 
 ---
 These start up the Lugdunon server at boot time with a "screen" process.
 
-1. Copy **opensim** into **/etc/init.d** - make sure it is executable
-2. Copy **startopensim** into **/root/opensim** - make sure it is executable
-3. Run "**systemctl enable opensim**" (only needed once, will stick)
-4. Run "**systemctl start opensim**" - starts Opensim without restarting the server
+1. Copy **opensim** into **~/bin** - make sure it is executable
+2. Copy **startopensim** into **/home/osowner/opensim** - make sure it is executable
 
 When you want to view the Opensim console, just enter "**screen -r**" in your shell.
 

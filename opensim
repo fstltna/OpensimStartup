@@ -27,7 +27,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-my $OPENSIMDIR = "/root/opensim";
+my $OPENSIMDIR = "/home/osowner/opensim";
 
 my $Command = $ARGV[0];
 if ($Command eq "")
@@ -35,7 +35,7 @@ if ($Command eq "")
 	$Command = "NONE";
 }
 
-my $running=`ps ax|grep OpenSim.exe|grep -v grep`;
+my $running=`ps ax|grep dotnet|grep -v grep`;
 
 if ($Command eq "start")
 {
@@ -59,7 +59,7 @@ elsif ($Command eq "stop")
 	if ($running ne "")
 	{
 		# Process is running, kill it
-		system("killall OpenSim.exe");
+		system("killall dotnet");
 	}
 }
 elsif ($Command eq "restart")
@@ -71,7 +71,7 @@ elsif ($Command eq "restart")
 	}
 	if ($running ne "")
 	{
-		system("killall OpenSim.exe");
+		system("killall dotnet");
 	}
 }
 elsif ($Command eq "status")

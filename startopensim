@@ -14,7 +14,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-my $OPENSIMDIR = "/root/opensim";
+my $OPENSIMDIR = "/home/osowner/opensim";
 my $SCREENCMD = "/usr/bin/screen";
 
 # No changes below here...
@@ -55,10 +55,10 @@ while (-1)
 			close($OUTF);
 			chdir "$OPENSIMDIR/bin";
 			print "Starting screen process\n";
-			system("$SCREENCMD -fa -S Opensim -d -U -m mono OpenSim.exe");
+			system("$SCREENCMD -fa -S Opensim -d -U -m ~/opensim/bin/opensim.sh");
 		}
 	}
-	# Sleep for 1 minutes befor checking again
-	sleep(60);
+	# Sleep for 5 minutes before checking again
+	sleep(300);
 }
 exit(0);
